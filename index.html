@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Con mi enamorada Ruth</title>
+</head>
+
+<body>
+  <h1 id="title">Hola como estas, espero que estés bien</h1>
+
+  <h2 class="class">Estoy aprendiendo a programar</h2>
+
+  <div class="tabla-multiplicar">
+  </div>
+
+  <script>
+    const d = document
+    const $title = d.getElementById('title')
+    $title.addEventListener('mouseenter', () => {
+      $title.style.backgroundColor = "red"
+    })
+    $title.addEventListener('mouseleave', () => {
+      $title.style.backgroundColor = "green"
+    })
+
+    const tablaContainer = d.getElementsByClassName('tabla-multiplicar')
+
+
+    function getTable(numero) {
+      return `
+          <h2>Tabla del ${numero}</h2>
+          <table>
+            <thead>
+              <th>x</th>
+              <th></th>
+              <th>y</th>
+              <th></th>
+              <th>resultado</th>
+            </thead>
+            <tbody >
+              ${ getMultiplicacion(numero)}
+            </tbody>
+          </table>
+        `
+    }
+
+    tablaContainer[0].innerHTML = tablaMultiplicar(20)
+
+
+  </script>
+</body>
+
+</html>
