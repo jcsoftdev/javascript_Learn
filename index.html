@@ -13,6 +13,7 @@
   <h2 class="class">Estoy aprendiendo a programar</h2>
 
   <div class="tabla-multiplicar">
+    <!-- todo el html que insertamos con innerHTML-->
   </div>
 
   <script>
@@ -21,6 +22,7 @@
     $title.addEventListener('mouseenter', () => {
       $title.style.backgroundColor = "red"
     })
+
     $title.addEventListener('mouseleave', () => {
       $title.style.backgroundColor = "green"
     })
@@ -28,27 +30,51 @@
     const tablaContainer = d.getElementsByClassName('tabla-multiplicar')
 
 
-    function getTable(numero) {
-      return `
-          <h2>Tabla del ${numero}</h2>
-          <table>
-            <thead>
-              <th>x</th>
-              <th></th>
-              <th>y</th>
-              <th></th>
-              <th>resultado</th>
-            </thead>
-            <tbody >
-              ${ getMultiplicacion(numero)}
-            </tbody>
-          </table>
-        `
+    // generar la filas de multiplicar de un numero  (generar tr's)
+    // ejm: 
+    // 1*2=2
+    // 1*3=3
+    // ...
+    function getTableRows(numero) {
+      
     }
 
-    tablaContainer[0].innerHTML = tablaMultiplicar(20)
+    function getTable(numero) {
+
+      let template = ''
+
+      template = `
+        <h2>Tabla del ${numero}</h2>
+        <table>
+          <thead>
+            <th>x</th>
+            <th></th>
+            <th>y</th>
+            <th></th>
+            <th>resultado</th>
+          </thead>
+          <tbody >
+            ${getTableRows(numero)}
+          </tbody>
+        </table>
+      `
 
 
+        let mensaje = `esto es la tabla del ${numero}`
+        let mensaje2 = 'esto es la tabla del ' + numero 
+
+        // mensaje === mensaje2 => True
+
+      return 
+    }
+
+
+    // generar las n tablas de multiplicar (cantidad)
+    function tablaMultiplicar(cantidad) {
+
+    }
+
+    tablaContainer[0].innerHTML = tablaMultiplicar(10)
   </script>
 </body>
 
