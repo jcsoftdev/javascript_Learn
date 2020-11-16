@@ -806,3 +806,14 @@ const nombresPokemon = [
   "Zygarde50% Forme",
 ];
 
+
+
+// metodos del array 
+// push
+// pop 
+// map => concatenar template string 
+
+
+// innerHTML
+// document.getElementById
+// addEventListener
